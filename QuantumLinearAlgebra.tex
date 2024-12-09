@@ -1,1 +1,15 @@
-\documentclass[border=2px]{standalone}\n\n\usepackage[braket, qm]{qcircuit}\n\usepackage{graphicx}\n\n\begin{document}\n\scalebox{1.0}{\n\Qcircuit @C=1.0em @R=1.0em @!R { \\\n\t \t\nghost{{q}_{0} :  } & \lstick{{q}_{0} :  } & \multigate{2}{\mathrm{QPE}}_<<<{0} & \qw & \qw & \qw\\\n\t \t\nghost{{q}_{1} :  } & \lstick{{q}_{1} :  } & \ghost{\mathrm{QPE}}_<<<{1} & \qw & \qw & \qw\\\n\t \t\nghost{{q}_{2} :  } & \lstick{{q}_{2} :  } & \ghost{\mathrm{QPE}}_<<<{2} & \qw & \qw & \qw\\\n\t \t\nghost{{q}_{3} :  } & \lstick{{q}_{3} :  } & \multigate{1}{\mathrm{Eigenvalue\,Inversion}}_<<<{0} & \qw & \qw & \qw\\\n\t \t\nghost{{q}_{4} :  } & \lstick{{q}_{4} :  } & \ghost{\mathrm{Eigenvalue\,Inversion}}_<<<{1} & \gate{\mathrm{Rotation}} & \qw & \qw\\\n\t \t\nghost{\mathrm{{c} :  }} & \lstick{\mathrm{{c} :  }} & \lstick{/_{_{3}}} \cw & \cw & \cw & \cw\\\n\\ }}\n\end{document}
+\documentclass[border=6.28mm,tikz]{standalone}
+\usepackage{amsmath} 
+\usetikzlibrary{quantikz}
+\usepackage{graphicx}
+\usepackage{braket}
+
+\begin{document}
+    
+    \begin{quantikz}[thin lines] 
+        \lstick{$\ket{0}$} & \qwbundle{n_{a}} & \qw & \qw \gategroup[wires=3,steps=3,style={dashed,rounded corners},label style={label position=below,anchor=north,yshift=-0.2cm}]{Repeat} & \gate[2]{\parbox{2cm}{\centering Eigenvalue Rotation}} & \qw & \meter{measure} & \qw & \qw & \qw \\ 
+        \lstick{$\ket{0}$} & \qwbundle{n_{b}} & \qw & \gate[2]{QPE} && \gate[2]{QPE^{\dagger}} & \qw & \gate[2]{F_m(x)}\gategroup[wires=2,steps=2,style={dashed,rounded corners},label style={label position=below,anchor=north,yshift=-0.2cm}]{$F_m(x)\coloneq\bra{x}M\ket{x}$} & \qw \\
+        \lstick{$\ket{b}$} & \qwbundle{n} & \qw && \qw && \qw && \meter{}
+    \end{quantikz}
+
+\end{document}

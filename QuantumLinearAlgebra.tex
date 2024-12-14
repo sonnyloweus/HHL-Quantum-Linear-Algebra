@@ -7,8 +7,8 @@
 \begin{document}
     
     \begin{quantikz}[thin lines] 
-        \lstick{$\ket{0}$} & \qwbundle{n_{a}} & \qw & \qw \gategroup[wires=3,steps=3,style={dashed,rounded corners},label style={label position=below,anchor=north,yshift=-0.2cm}]{Repeat} & \gate[2]{\parbox{2cm}{\centering Eigenvalue Rotation}} & \qw & \meter{measure} & \qw & \qw & \qw \\ 
-        \lstick{$\ket{0}$} & \qwbundle{n_{b}} & \qw & \gate[2]{QPE} && \gate[2]{QPE^{\dagger}} & \qw & \gate[2]{F_m(x)}\gategroup[wires=2,steps=2,style={dashed,rounded corners},label style={label position=below,anchor=north,yshift=-0.2cm}]{$F_m(x)\coloneq\bra{x}M\ket{x}$} & \qw \\
+        \lstick{$\ket{0}_a$} & \qw & \qw & \qw \gategroup[wires=3,steps=3,style={dashed,rounded corners},label style={label position=below,anchor=north,yshift=-0.2cm}]{Repeat} & \gate[2]{\parbox{2cm}{\centering Eigenvalue Rotation}} & \qw & \meter{measure} & \qw & \qw & \qw \\ 
+        \lstick{$\ket{0}$} & \qwbundle{n_{q}} & \qw & \gate[2]{QPE} && \gate[2]{QPE^{\dagger}} & \qw & \gate[2]{F_m(x)}\gategroup[wires=2,steps=2,style={dashed,rounded corners},label style={label position=below,anchor=north,yshift=-0.2cm}]{$F_m(x)\coloneq\bra{x}M\ket{x}$} & \qw \\
         \lstick{$\ket{b}$} & \qwbundle{n} & \qw && \qw && \qw && \meter{}
     \end{quantikz}
 

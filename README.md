@@ -23,7 +23,14 @@ and where $\vec{x}$ and $\vec{b}$ ultimately represent quantum states $\ket{x}$ 
 Much of the implementations that do exist are hard-coded to specific linear system case studies, which this paper will humbly stray away from in favor of a more self-contained generalized algorithm that fully utilizes the derivations and concepts that HHL employs. To do this, we will walk through different quantum subroutines, which as a sacrafice, increase the query complexity of the system.
 
 Note: we will generally be working in the normalized domain.
+
 </div>
+
+<h5>Contributors</h5>
+<ul >
+<li>Sonny Lowe: Derived and Coded the Algorithm</li>
+<li>David Lee: Transcribed Latex</li>
+</ul>
 
 ## Built With
 * [![Python][Python.org]][Python-url]

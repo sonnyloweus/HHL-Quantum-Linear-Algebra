@@ -1,6 +1,6 @@
 <a id="readme-top"></a>
 
-![cover_photo](assets/circuit3.png)
+![cover_photo](assets/schematic.png)
 
 <div align="center">
 
@@ -12,6 +12,17 @@
     <br />
     <a href="https://github.com/sonnyloweus">Sonny Lowe</a>
   </p>
+</div>
+
+<div style="font-family: 'Times New Roman'; font-size: 16px;">
+
+This notebook will discuss the Harrow-Hassidim-Lloyd (HHL) quantum algorithm, meant for solving a linear system
+$$A\vec{x}=\vec{b} \text{ ,  where } A \text{ is a hermitian matrix}$$
+and where $\vec{x}$ and $\vec{b}$ ultimately represent quantum states $\ket{x}$ and $\ket{b}$ respectively. We will provide a derivation, implementation, generalization to non-hermitian matrices, as well as the context for HHL as a subroutine.
+
+Much of the implementations that do exist are hard-coded to specific linear system case studies, which this paper will humbly stray away from in favor of a more self-contained generalized algorithm that fully utilizes the derivations and concepts that HHL employs. To do this, we will walk through different quantum subroutines, which as a sacrafice, increase the query complexity of the system.
+
+Note: we will generally be working in the normalized domain.
 </div>
 
 ## Built With
